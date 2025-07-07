@@ -1,6 +1,8 @@
 package stringProblems;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ReverseWordsInString {
     public static void main(String[] args) {
@@ -17,12 +19,14 @@ public class ReverseWordsInString {
          */
 
         String str = "i.like.this.program.very.much";
-        String[] words = str.split("\\.");
-        StringBuilder sb = new StringBuilder();
-        for (int i = words.length-1; i>=0; i--) {
-            sb.append(words[i]);
-            sb.append(".");
+        String[] arr = str.split("\\.");
+        List<String> list = new ArrayList<>();
+        for (int i=arr.length -1 ; i>=0; i--) {
+            if(!arr[i].isEmpty()) {
+                list.add(arr[i]);
+            }
         }
-        System.out.println(sb);
+        String res = String.join(".", list);
+        System.out.println(res);
     }
 }

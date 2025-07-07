@@ -27,5 +27,31 @@ public class FirstUniqueElement {
             }
         }
         System.out.println(res);
+        anotherWay(arr);
+    }
+
+    private static void anotherWay(int[] arr) {
+        int result = 0;
+        for (int i =0 ; i< arr.length ; i++) {
+            for (int j =0 ; j < arr.length ; j++) {
+                if ( i!=j) {
+                    if (arr[i] == arr[j]) {
+                        result = 0;
+                        break;
+                    } else if (arr[i] != arr[j]) {
+                        result = arr[i];
+                    }
+                }
+            }
+            if (result != 0) {
+                System.out.println(result);
+                break;
+            }
+        }
     }
 }
+
+// ----------------- Another way -----------------//
+
+
+

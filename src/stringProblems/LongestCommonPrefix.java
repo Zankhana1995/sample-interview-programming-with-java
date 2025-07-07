@@ -6,15 +6,15 @@ import java.util.Objects;
 public class LongestCommonPrefix {
     public static void main(String[] args) {
         /**
-         * Input: arr[] = [“geeksforgeeks”, “geeks”, “geek”, “geezer”]
+         * Input: arr[] = ["geeksforgeeks", "geeks", "geek", "geezer"]
          * Output: “gee”
          * Explanation: “gee” is the longest common prefix in all the given strings: “geeksforgeeks”, “geeks”, “geeks” and “geezer”.
          *
-         * Input: arr[] = [“apple”, “ape”, “april”]
+         * Input: arr[] = ["apple", "ape", "april"]
          * Output : “ap”
          * Explanation: “ap” is the longest common prefix in all the given strings: “apple”, “ape” and “april”.
          *
-         * Input: arr[] = [“hello”, “world”]
+         * Input: arr[] = ["hello", "world"]
          * Output: “”
          * Explanation: There’s no common prefix in the given strings.
          *

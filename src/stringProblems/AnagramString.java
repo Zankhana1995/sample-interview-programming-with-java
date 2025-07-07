@@ -13,6 +13,7 @@ public class AnagramString {
          * Output: true
          *
          * Input: s1 ="listen", s2="silent"
+         * Output : true
          */
 
         String s1 = "listen";

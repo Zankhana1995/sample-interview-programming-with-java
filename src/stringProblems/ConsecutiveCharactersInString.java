@@ -2,6 +2,7 @@ package stringProblems;
 
 public class ConsecutiveCharactersInString {
     public static void main(String[] args) {
+        // print consecutive characters in String with count of how many times they appeared
         String input = "aaabbbbccdddeeeffgghiii";
         findConsecutiveCharacters(input);
     }
@@ -29,4 +30,7 @@ public class ConsecutiveCharactersInString {
             System.out.println(previous + " happens " + count + " times");
         }
     }
+
+    // Another way
+
 }

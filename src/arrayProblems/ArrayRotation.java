@@ -1,6 +1,6 @@
 package arrayProblems;
 
-public class RotateArrayBasedOnGivenValue {
+public class ArrayRotation {
     public static void main(String[] args) {
         /**
          *
@@ -27,15 +27,14 @@ public class RotateArrayBasedOnGivenValue {
     }
 
     private static int[] rotateArr(int[] arr, int d) {
-        int[] arr2 = arr.clone();
         while (d > 0) {
-            int temp = arr2[0];
-            for (int i = 0; i < arr.length -1; i++) {
-                arr2[i] = arr2[i+1];
+            int left = arr[0];
+            for (int i = 1; i < arr.length ; i++) {
+                arr[i-1] = arr[i];
             }
-            arr2[arr2.length-1] = temp;
-            d--;
+            arr[arr.length -1] = left;
+            d-- ;
         }
-        return arr2;
+        return arr;
     }
 }
