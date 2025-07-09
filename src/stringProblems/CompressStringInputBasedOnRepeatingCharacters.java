@@ -1,8 +1,5 @@
 package stringProblems;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class CompressStringInputBasedOnRepeatingCharacters {
     public static void main(String[] args) {
         // Compress String inputstr = "aaabb3sdaab"; outputstr = "a3b23sda2b";
