@@ -11,7 +11,7 @@ public class CheckPalindrome {
          * Output: 0
          * Explanation: s is not a palindrome
          */
-        String s = "121";
+        String s = "abcba";
         char[] chars = s.toCharArray();
         int left = 0;
         int right = s.length() - 1;
@@ -41,3 +41,6 @@ public class CheckPalindrome {
         System.out.println(isPalindrome);
     }
 }
+
+
+// Another way, reverse string, and verify if both are equals or not
