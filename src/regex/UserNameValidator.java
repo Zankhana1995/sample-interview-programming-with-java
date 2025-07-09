@@ -1,4 +1,4 @@
-package random;
+package regex;
 
 public class UserNameValidator {
     public static void main(String[] args) {

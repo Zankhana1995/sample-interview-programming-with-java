@@ -2,8 +2,26 @@ package random;
 
 public class PalindromeNumber {
     public static void main(String[] args) {
-        boolean res = isPalindrome(121);
-        System.out.println(res);
+       // boolean res = isPalindrome(1211);
+      //  System.out.println(res);
+        boolean result = isPalindromeConvertingToString(121211);
+        System.out.println(result);
+    }
+
+    private static boolean isPalindromeConvertingToString(int n) {
+        String s = String.valueOf(n);
+        int left = 0;
+        int right = s.length()-1;
+        boolean result = true;
+        while(left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                result = false;
+                break;
+            }
+            left ++;
+            right --;
+        }
+        return result;
     }
 
     public static boolean isPalindrome(int x) {
