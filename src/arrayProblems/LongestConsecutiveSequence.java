@@ -1,6 +1,8 @@
 package arrayProblems;
 
 import java.util.Arrays;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class LongestConsecutiveSequence {
     public static void main(String[] args) {
@@ -20,7 +22,10 @@ public class LongestConsecutiveSequence {
 
          */
         int[] arr = {1, 9, 3, 10, 4, 20, 2};
-        Arrays.sort(arr);
+        Arrays.sort(arr); // O(n logn) complexity
+
+        int result = methodWithLogNComplexity(arr);
+        System.out.println("methodWithLogNComplexity result => " + result);
 
         int count = 1;
         int res = 1;
@@ -39,5 +44,32 @@ public class LongestConsecutiveSequence {
         // time complexity : O(n logn), space complexity = O(1)
     }
 
+    private static int methodWithLogNComplexity(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return 0;
+        }
 
+        // log(n) complexity
+        Set<Integer> numSet = new TreeSet<>();
+        for(int num : arr) {
+            numSet.add(num);
+        }
+
+        int result = 1;
+        int count = 1;
+        int previous = Integer.MIN_VALUE;
+
+        // log(n) complexity
+        for (int num : numSet) {
+            if (previous != Integer.MIN_VALUE && num == previous + 1) {
+                count ++;
+            } else {
+                count = 1;
+            }
+            result = Math.max(result, count);
+            previous = num;
+        }
+        return result;
+        // Total : log(n) + log(n) = Log(n) complexity
+    }
 }
