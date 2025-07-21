@@ -26,6 +26,7 @@ public class MostPopularProduct {
                 .flatMap(customer -> customer.getSubscriptions().stream())
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
+        System.out.println(productFrequencyMap);
         long maxValue = productFrequencyMap.values().stream()
                 .mapToLong(Long::longValue)
                 .max()

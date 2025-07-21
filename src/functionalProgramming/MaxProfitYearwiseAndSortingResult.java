@@ -19,6 +19,7 @@ public class MaxProfitYearwiseAndSortingResult {
         Map<Integer, List<AnnualProfit>> groupedByYear = profits.stream()
                 .collect(Collectors.groupingBy(AnnualProfit::getYear));
 
+        System.out.println(groupedByYear);
         // Step 2: Get max profit per year
         Map<Integer, Double> maxProfitPerYear = new HashMap<>();
         for (Map.Entry<Integer, List<AnnualProfit>> entry : groupedByYear.entrySet()) {
@@ -54,5 +55,13 @@ class AnnualProfit {
 
     public double getProfit() {
         return profit;
+    }
+
+    @Override
+    public String toString() {
+        return "AnnualProfit{" +
+                "year=" + year +
+                ", profit=" + profit +
+                '}';
     }
 }
