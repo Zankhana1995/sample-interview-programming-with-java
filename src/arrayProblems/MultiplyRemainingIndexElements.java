@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MultiplyRemainingIndexElements {
     public static void main(String[] args) {
-
+        // mastercard round 1 (TechM)
         //Input : {1,2,3,4}
         // Output : {24,12,8,6}
         // On each index, multiply remaining index element and save in result array

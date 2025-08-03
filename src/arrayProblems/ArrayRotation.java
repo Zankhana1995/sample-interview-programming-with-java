@@ -16,7 +16,7 @@ public class ArrayRotation {
          * So the array becomes arr[] = {3, 4, 5, 6, 1, 2}
          *
          */
-
+        // PointClickCare round 1
         int[] arr = {1, 2, 3, 4, 5, 6};
         // output : 3 4 5 6 1 2
         int d = 2;

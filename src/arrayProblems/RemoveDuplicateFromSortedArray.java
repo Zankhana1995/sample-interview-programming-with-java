@@ -15,7 +15,7 @@ public class RemoveDuplicateFromSortedArray {
             return nums.length;
         // Start from the second element
         // Nice note : if you want to check adjacent element and don't want index out of bound then start with index 1,
-        // and check with previous one
+        // and check with previous one, you need only 1 for loop
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] != nums[i - 1]) {
                 nums[count] = nums[i];

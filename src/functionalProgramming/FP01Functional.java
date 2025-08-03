@@ -20,7 +20,7 @@ public class FP01Functional {
     }
 
     private static void findEvenNumber(List<Integer> integers) {
-       List<Integer>  finalList = integers.stream().filter(n -> n%2==0).toList();
+       List<Integer>  finalList = integers.stream().filter(n -> n%2 == 0).toList();
        finalList.forEach(FP01Functional::print);
     }
 
