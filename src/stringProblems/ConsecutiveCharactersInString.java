@@ -5,6 +5,7 @@ public class ConsecutiveCharactersInString {
         // print consecutive characters in String with count of how many times they appeared
         String input = "aaabbbbccdddeeeffgghiii";
         findConsecutiveCharacters(input);
+        secondWay(input);
     }
 
     private static void findConsecutiveCharacters(String input) {
@@ -31,6 +32,16 @@ public class ConsecutiveCharactersInString {
         }
     }
 
-    // Another way
-
+    private static void secondWay(String input) {
+        int count = 1;
+        for (int i=1; i <input.length();i++) {
+            if(input.charAt(i) == input.charAt(i-1)) {
+                count ++;
+            } else {
+                System.out.println(input.charAt(i-1) + " appears for " + count + " times");
+                count = 1;
+            }
+        }
+        System.out.println(input.charAt(input.length()-1) + " appears for " + count + " times");
+    }
 }
