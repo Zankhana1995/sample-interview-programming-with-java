@@ -28,12 +28,7 @@ public class NonRepeatingCharacter {
     private static String findNonrepeatingCharactersCollection(String s) {
         Map<Character, Integer> map = new LinkedHashMap<>();
         for (char c : s.toCharArray()) {
-            if (!map.containsKey(c)) {
-                map.put(c, 1);
-            }
-            else {
-                map.put(c, map.get(c) + 1);
-            }
+            map.put(c,map.getOrDefault(c,0)+1);
         }
         String result = "";
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
