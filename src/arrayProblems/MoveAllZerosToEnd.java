@@ -1,6 +1,7 @@
 package arrayProblems;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MoveAllZerosToEnd {
@@ -21,15 +22,9 @@ public class MoveAllZerosToEnd {
          */
         int[] arr = {1, 2, 0, 4, 3, 0, 5, 0};
         int[] result = moveAllZerosToEnd(arr);
-        System.out.print("With Collection ");
-        for (int j : result) {
-            System.out.println(j + " ");
-        }
+        System.out.print("With Collection " + Arrays.toString(result));
         int[] result2  = moveAllZerosToEndWithoutCollection(arr);
-        System.out.print("Without Collection ");
-        for (int j : result2) {
-            System.out.println(j + " ");
-        }
+        System.out.println("Without Collection " + Arrays.toString(result2));
 
     }
 
@@ -44,9 +39,10 @@ public class MoveAllZerosToEnd {
                 count++;
             }
         }
-        for (int i =count;i < arr.length - count ; i++) {
-            arr[count] = 0;
-        }
+        // There is no need of below for loop to insert 0 for remaining spaces because default value of int array is 0.
+//        for (int i =count;i < arr.length - count ; i++) {
+//            arr[count] = 0;
+//        }
         return tempArray;
     }
 
