@@ -1,9 +1,6 @@
 package employees;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
@@ -34,7 +31,7 @@ public class EmployeeService {
         List<String> skills = employees.stream().map(e -> e.getSkills())
                 .flatMap(list -> list.stream())
                 .distinct()
-                .collect(Collectors.toList());
+                .toList();
     }
 
     private static void findEmployeesStartswith(List<Employee> employees) {

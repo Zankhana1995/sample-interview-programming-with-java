@@ -13,17 +13,19 @@ public class SecondLargestElement {
             Scanner input = new Scanner(System.in);
             arr[i] = input.nextInt();
         }
-      //  int result = findSecondLargest(arr);
+        int result = findSecondLargest(arr);
         int sortingResult = findSortingSecondLargest(arr);
-    //    System.out.println(result);
+        System.out.println(result);
         System.out.println(sortingResult);
     }
 
+    // Complexity : O(n log(n))
     private static int findSortingSecondLargest(int[] arr) {
         Arrays.sort(arr);
         return arr[arr.length - 2];
     }
 
+    // Complexity : O(n)
     private static int findSecondLargest(int[] arr) {
         int max = Integer.MIN_VALUE;
         int secondMax = Integer.MIN_VALUE;

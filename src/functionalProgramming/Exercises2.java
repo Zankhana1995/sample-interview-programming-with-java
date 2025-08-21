@@ -21,6 +21,6 @@ public class Exercises2 {
     }
 
     private static List<String> checkLetters(List<String> courses) {
-        return courses.stream().filter(course -> course.length()>=4).toList();
+        return courses.stream().filter(course -> course.length() >= 4).toList();
     }
 }

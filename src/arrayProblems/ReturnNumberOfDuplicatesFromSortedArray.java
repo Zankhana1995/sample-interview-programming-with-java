@@ -2,9 +2,10 @@ package arrayProblems;
 
 import java.util.Arrays;
 
-public class RemoveDuplicateFromSortedArray {
+public class ReturnNumberOfDuplicatesFromSortedArray {
     public static void main(String[] args) {
         int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        // return number of duplicates -> Output : 5
         int res = removeDuplicates(nums);
         System.out.println(res);
     }
