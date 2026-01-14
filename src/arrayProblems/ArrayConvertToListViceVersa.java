@@ -17,6 +17,13 @@ public class ArrayConvertToListViceVersa {
                 .boxed()               // Convert each int to Integer (boxing)
                 .toList(); // Collect as List<Integer>
 
+        // List to Array or integer
+        int[] newArray = list.stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
+
+        // Writing directly Integer[] boxedArray = list.toArray(new Integer[0]); won't work
+        // This gives Integer[], not int[] , You’d still need to unbox it manually
 
         // ------------- String Array ------------ //
 
