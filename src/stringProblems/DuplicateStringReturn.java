@@ -19,6 +19,7 @@ public class DuplicateStringReturn {
         System.out.println("Sorted array "+ Arrays.toString(array));
         for (int i=0; i < array.length -1 ; i++) {
             if (Objects.equals(array[i + 1], array[i])) {
+                // Or array[i].equals(array[i+1])
                 return array[i+1];
             }
         }
@@ -26,15 +27,15 @@ public class DuplicateStringReturn {
     }
 
     private static String duplicateReturnWithCollection(String[] array) {
-        List<String> input = Arrays.asList(array);
         String res = "";
         Set<String> set = new HashSet<>();
-        for(String s : input) {
+        for(String s : array) {
             if(!set.contains(s)) {
                 set.add(s);
             }
             else {
-                res += s;
+                res = s;
+                break; // considering only one duplicate present
             }
         }
         return res;

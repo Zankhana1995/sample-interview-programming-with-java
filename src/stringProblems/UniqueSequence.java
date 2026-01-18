@@ -8,7 +8,7 @@ public class UniqueSequence {
 
         // Asked in citi bank round 1 with Hexaware
         String s = "cccdsdsscaab";
-        // desired output : dscab
+        // desired output in Unique Sequence: dscab
         char[] chars = s.toCharArray();
         String result = removeDups(chars);
         System.out.println(result);

@@ -28,3 +28,27 @@ public class CompressStringInputBasedOnRepeatingCharacters {
         System.out.println(sb);
     }
 }
+
+/*      Alternatively convert to character array
+
+        char[] c = input.toCharArray();
+        int count = 1;
+        for (int i=0; i<c.length -1 ; i++) {
+            if (c[i] == c[i+1]) {
+                count ++;
+            } else {
+                if (count == 1) {
+                    sb.append(c[i]);
+                } else {
+                    sb.append(c[i]).append(count);
+                    count = 1;
+                }
+            }
+        }
+        if (count == 1) {
+            sb.append(c[c.length-1]);
+        } else {
+            sb.append(c[c.length -1]).append(count);
+        }
+        System.out.println(sb.toString());
+ */

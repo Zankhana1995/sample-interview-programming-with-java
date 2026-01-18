@@ -5,6 +5,7 @@ public class ConsecutiveCharactersInString {
         // print consecutive characters in String with count of how many times they appeared
         String input = "aaabbbbccdddeeeffgghiii";
         findConsecutiveCharacters(input);
+        // second is the easiest way
         secondWay(input);
     }
 
