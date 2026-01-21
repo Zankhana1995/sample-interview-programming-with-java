@@ -11,7 +11,6 @@ public class ReverseArray {
         int[] result = new int[arr.length];
         int count =0;
         for (int i=arr.length -1 ; i>=0; i--) {
-
             result[i] = arr[count];
             count++;
         }

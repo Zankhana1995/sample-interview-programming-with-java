@@ -6,9 +6,10 @@ import java.util.Arrays;
 
 public class PlusOneArray {
     public static void main(String[] args) {
-        int[] digits = {9,  9, 9};
+        int[] digits = {9, 9, 9};
         int[] result = plusOne(digits);
-        System.out.println(Arrays.toString(result)); // Output: [1, 2, 4]
+        System.out.println(Arrays.toString(result)); // Output: [1, 0, 0, 0]
+        // Input : {1, 2, 3} -> {1, 2, 4}
     }
 
     private static int[] plusOne(int[] digits) {

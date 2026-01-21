@@ -33,6 +33,8 @@ public class SecondLargestElement {
             if(arr[i] > max) {
                 secondMax = max;
                 max = arr[i];
+            } else if (arr[i] > secondMax){
+                secondMax = arr[i];
             }
         }
         return secondMax;
