@@ -1,10 +1,11 @@
-package employees;
+package functionalProgramming.employees;
 
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.DoubleStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
-public class EmployeeService {
+public class EmployeeFunctionalCodeSnippet {
 
     public static void main(String[] args) {
         List<Employee> employees = new ArrayList<>();
@@ -14,7 +15,7 @@ public class EmployeeService {
         employees.add(emp);
         employees.add(emp2);
         employees.add(emp3);
-        findAverageSalary(employees);
+        findAverageSalaryOfITDepartmentSeniorEngineer(employees);
         findEmployeesStartswith(employees);
         findListofAllskills(employees);
         sortBySalary(employees);
@@ -39,7 +40,7 @@ public class EmployeeService {
         System.out.println(result);
     }
 
-    private static void findAverageSalary(List<Employee> employees) {
+    private static void findAverageSalaryOfITDepartmentSeniorEngineer(List<Employee> employees) {
         double averageSalary = employees.stream()
                 .filter(e -> e.getDepartment().equals("IT"))
                 .filter(e -> e.getRole().equals("Senior Engineer"))
