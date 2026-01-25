@@ -14,29 +14,43 @@ public class MaxProfitYearwiseAndSortingResult {
                 new AnnualProfit(2023, 11000)
         );
 
-
         // Step 1: Group by year
         Map<Integer, List<AnnualProfit>> groupedByYear = profits.stream()
                 .collect(Collectors.groupingBy(AnnualProfit::getYear));
 
-        System.out.println(groupedByYear);
+        System.out.println("Step A Result => " + groupedByYear);
+
         // Step 2: Get max profit per year
+        List<AnnualProfit> resultList = new ArrayList<>();
         Map<Integer, Double> maxProfitPerYear = new HashMap<>();
         for (Map.Entry<Integer, List<AnnualProfit>> entry : groupedByYear.entrySet()) {
             double maxProfit = entry.getValue().stream()
                     .mapToDouble(AnnualProfit::getProfit)
                     .max()
                     .orElse(0.0);
-
+            AnnualProfit a = new AnnualProfit(entry.getKey(), maxProfit);
+            resultList.add(a);
             maxProfitPerYear.put(entry.getKey(), maxProfit);
         }
 
-        // Step 3: Sort by year and print
+        // Step 3 is done 3 ways, first being the easiest way
+        // Step 3 (A) : Sort By year and Print
+        System.out.println("List resultStep 3(A) " + resultList.stream().sorted(Comparator.comparing(x -> x.getYear())).toList());
+
+        // Step 3 (B): Sort by year and print
         maxProfitPerYear.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
                 .forEach(entry ->
-                        System.out.println("Year: " + entry.getKey() + ", Max Profit: " + entry.getValue())
+                        System.out.println("Step 3(B) Year: " + entry.getKey() + ", Max Profit: " + entry.getValue())
                 );
+
+
+        // Step 3 (C)
+        LinkedHashMap<Integer, Double> resultLinkedHashMap = maxProfitPerYear.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a, b) -> a, LinkedHashMap::new));
+        System.out.println("Step 3(C) resultLinkedHashMap => " + resultLinkedHashMap);
+
     }
 }
 

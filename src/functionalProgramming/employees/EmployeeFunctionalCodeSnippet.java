@@ -50,5 +50,4 @@ public class EmployeeFunctionalCodeSnippet {
         System.out.println(averageSalary);
     }
 
-
 }

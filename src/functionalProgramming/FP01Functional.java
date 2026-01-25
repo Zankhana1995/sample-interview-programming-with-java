@@ -8,7 +8,8 @@ public class FP01Functional {
 
        // printAllNumbersInListStructured(List.of(1,2,3,4,5,6,7,8,9));
         // findEvenNumber(List.of(1,2,3,4,5,6,7,8,9));
-        SquaresOfEvenNumbers(List.of(1,2,3,4,5,6,7,8,9));
+        squaresOfEvenNumbers(List.of(1,2,3,4,5,6,7,8,9));
+        cubesOfOddNumbers(List.of(1,2,3,4,5,6,7,8,9));
     }
 
     private static void printAllNumbersInListStructured(List<Integer> integers) {
@@ -24,8 +25,14 @@ public class FP01Functional {
        finalList.forEach(FP01Functional::print);
     }
 
-    private static void SquaresOfEvenNumbers(List<Integer> numList) {
+    private static void cubesOfOddNumbers(List<Integer> numList) {
         System.out.println();
         numList.stream().filter(n -> n%2!=0).map(n -> n*n*n).forEach(FP01Functional::print);
     }
+
+    private static void squaresOfEvenNumbers(List<Integer> numList) {
+        System.out.println();
+        numList.stream().filter(n -> n%2!=0).map(n -> n*n*n).forEach(FP01Functional::print);
+    }
+
 }

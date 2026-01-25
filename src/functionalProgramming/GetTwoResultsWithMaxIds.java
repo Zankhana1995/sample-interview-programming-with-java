@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class GetTwoResultsWithMaxIds {
+    /* Merative */
+
     public static void main(String[] args) {
         List<Person> people = Arrays.asList(
                 new Person(101, "Alice", 30),
@@ -43,6 +45,16 @@ public class GetTwoResultsWithMaxIds {
          .collect(Collectors.toList());
          */
 
+        /** For non-primitives (Object types) use only comparing
+         | Getter return type | Best Comparator     |
+         | ------------------ | ------------------- |
+         | `int`              | `comparingInt` ✅    |
+         | `long`             | `comparingLong` ✅   |
+         | `double`           | `comparingDouble` ✅ |
+         | `Integer`          | `comparing`         |
+         | `String`           | `comparing`         |
+         | `LocalDate`        | `comparing`         |
+         */
     }
 }
 

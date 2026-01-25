@@ -7,7 +7,7 @@ public class MaxSalaryAvgSalary {
 
     /**
      *
-     * .stream() creates a stream of employees.
+     * .stream() creates a stream of functionalProgramming.employees.
      * .mapToDouble(Employee::getSalary) converts the stream to a DoubleStream of salaries.
      * .max() and .average() are terminal operations to get the results.
      * .orElse(0.0) handles the case when the list is empty.

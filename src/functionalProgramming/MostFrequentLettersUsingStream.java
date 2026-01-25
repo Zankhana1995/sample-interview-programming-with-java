@@ -18,13 +18,11 @@ public class MostFrequentLettersUsingStream {
 
        System.out.println("CountMap ==> " + countMap);
 
-
         // Find the max frequency
         long maxFrequency = countMap.values().stream()
                 .mapToLong(Long::longValue)
                 .max()
                 .orElse(0);
-
 
         // Filter Character having max frequency
         List<Character> mostFrequentLetters = countMap.entrySet().stream()
@@ -33,7 +31,6 @@ public class MostFrequentLettersUsingStream {
                 .toList();
 
         System.out.println(mostFrequentLetters.getFirst());
-
 
          // Count occurrences of a character
         String text = "Mississippi";
