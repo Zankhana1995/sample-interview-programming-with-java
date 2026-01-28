@@ -42,5 +42,18 @@ public class CheckPalindrome {
     }
 }
 
-
-// Another way, reverse string, and verify if both are equals or not
+/** Another way, reverse string, and verify if both are equals or not
+     String s = "abba";
+     char[] chars = s.toCharArray();
+     int left = 0;
+     int right = chars.length - 1;
+     while (left < right) {
+         char temp = chars[left];
+         chars[left] = chars[right];
+         chars[right] = temp;
+         left ++;
+         right --;
+     }
+     String result = new String(chars);
+     System.out.println(s.equals(result));
+ */
