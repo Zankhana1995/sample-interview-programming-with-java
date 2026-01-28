@@ -39,23 +39,29 @@ public class DuplicateStringReturn {
             }
         }
         return res;
+
+        /*
+        Another way :
+
+         for (String s : strings) {
+            if (!seen.add(s)) {  // if add fails, it's a duplicate
+                result.append(s);
+                break; // consider only one element duplicate
+            }
+        }
+         */
     }
 
     private static String duplicateReturn(String[] array) {
-        boolean duplicate = false;
-        String result = "";
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[i].equals(array[j])) {
-                    duplicate = true;
+        StringBuilder result = new StringBuilder();
+        for (int i=0; i < array.length - 1 ; i++) {
+            for (int j=i+1 ; j < array.length - 1 ; j++) {
+                if(array[i].equals(array[j])) {
+                    result.append(array[i]);
                     break;
                 }
             }
-            if (duplicate) {
-                result = array[i];
-                break;
-            }
         }
-        return result;
+        return result.toString();
     }
 }
