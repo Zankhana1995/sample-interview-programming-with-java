@@ -27,7 +27,19 @@ public class EmailAddressValidator {
  | TLD like `.com`, `.org`, `.co.in` | ✅       |
  | Upper/lowercase TLD               | ✅       |
 
- Incorrect cases to be handled:
+ -> (\\.[A-Za-z0-9+_-]+)*
+    means zero or more groups that start with a dot followed by valid characters.
+    After the first word, allow any number of sections that start with a dot and have letters/numbers/symbols.
+     This part allows:
+     john
+     john.doe
+     john.doe.smith
+     a.b.c
+     No dot → OK
+     One ".word" → OK
+     Many ".word.word" → OK
+
+ Incorrect cases to be handled by the EMAIL_REGEX:
  .test@mail.com
  test.@mail.com
  test..abc@mail.com
