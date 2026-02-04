@@ -58,6 +58,7 @@ public class FirstUniqueElement {
 
     // ----------------- Another way : Using Collection : O(n) complexity -----------------//
     private static void usingCollections(int[] arr) {
+        // Linked hashMap is necessary to preserve insertion sequence because we want to get first
         Map<Integer, Integer> freqMap = new LinkedHashMap<>();
         //  {1, 4, 5, 1, 2, 0, 4, 5};
         for(int n : arr) {

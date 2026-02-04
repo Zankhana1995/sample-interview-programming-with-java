@@ -27,6 +27,8 @@ public class LongestConsecutiveSequence {
         int result = methodWithLogNComplexity(arr);
         System.out.println("methodWithLogNComplexity result => " + result);
 
+        // Below is brute force, not optimal. Instead, use methodWithLogNComplexity approach
+
         int count = 1;
         int res = 1;
         for (int i = 1 ; i < arr.length ; i++) {
