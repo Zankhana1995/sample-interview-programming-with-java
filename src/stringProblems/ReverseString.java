@@ -17,7 +17,6 @@ public class ReverseString {
             sb.append(s.charAt(i));
         }
         System.out.println(sb);
-
         System.out.println(reverseBySwaping(s));
     }
 
@@ -39,3 +38,8 @@ public class ReverseString {
         return String.valueOf(chars);
     }
 }
+/** Revese with built-in function in StringBuilder
+     String original = "hello";
+     String reversed = new StringBuilder(original).reverse().toString();
+     System.out.println(reversed); // Output: "olleh"
+ */
