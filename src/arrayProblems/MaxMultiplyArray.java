@@ -15,7 +15,7 @@ public class MaxMultiplyArray {
     /*
     Sort the array using some efficient in-place sorting algorithm in ascending order.
 In triplets, either there will be 2 negative elements and 1 positive element or all 3 positive elements so that resultant product will be positive.
-Therefore, To maximise the result return the maximum of  product of the last three elements of the array and the product of the first two elements and last element.
+Therefore, To maximize the result return the maximum of  product of the last three elements of the array and the product of the first two elements and last element.
      */
     private static int maxProduct(int[] arr) {
         Arrays.sort(arr);

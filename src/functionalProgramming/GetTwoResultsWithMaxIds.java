@@ -40,7 +40,7 @@ public class GetTwoResultsWithMaxIds {
 
         /**
          return people.stream()
-         .sorted(Comparator.comparing(Person::getId).reversed())
+         .sorted(Comparator.comparingInt(Person::getId).reversed())
          .limit(2)
          .collect(Collectors.toList());
          */
