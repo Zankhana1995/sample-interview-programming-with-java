@@ -86,3 +86,17 @@ class Person {
         return "Person{id=" + id + ", name='" + name + "', age=" + age + "}";
     }
 }
+
+/**
+
+ Interviewer asked : Do you need equals() and HashCode() methods in Person class ?
+ Answer : No
+ HashMap and HashSet rely on hashCode(), They use equals() to check duplicates.
+
+ Right now your code uses:
+ Sorting (Comparator), Limiting, No hashing, No equality checks
+
+ So Java will just compare IDs using your comparator.
+ No need for equals() / hashCode().
+
+ */
