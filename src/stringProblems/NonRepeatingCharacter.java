@@ -3,6 +3,7 @@ package stringProblems;
 import java.util.*;
 
 public class NonRepeatingCharacter {
+    // Or firstUniqueChar
     public static void main(String[] args) {
         /**
          * Input: s = "geeksforgeeks"
@@ -31,12 +32,19 @@ public class NonRepeatingCharacter {
             map.put(c,map.getOrDefault(c,0)+1);
         }
         String result = "";
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            if (entry.getValue() == 1) {
-                result += entry.getKey();
-                break;
+//        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+//            if (entry.getValue() == 1) {
+//                result += entry.getKey();
+//                break;
+//            }
+//        }
+
+        for(char c : s.toCharArray()) {
+            if(map.get(c) == 1) {
+                return String.valueOf(c);
             }
         }
+
         return result;
     }
 

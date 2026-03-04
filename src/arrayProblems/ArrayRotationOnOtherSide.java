@@ -6,10 +6,10 @@ public class ArrayRotationOnOtherSide {
     public static void main(String[] args) {
         /**
          *   int[] nums = {1, 100, 3, 99, 15};
-         *   k =2
+         *   k = 2
          *   result = {99,15,1,100,3}
          */
-        int[] nums = {1, 100, 3, 99,15};
+        int[] nums = {1, 100, 3, 99,15}; // Output : [3, 99, 15, 1, 100]
         int k = 3;
 
         while (k > 0) {
