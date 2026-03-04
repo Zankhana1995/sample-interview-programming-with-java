@@ -1,4 +1,4 @@
-package arrayProblems;
+package arrayAndCollectionsProblems;
 
 public class ReturnDuplicateElementIndexFromArray {
     public static void main(String[] args) {
