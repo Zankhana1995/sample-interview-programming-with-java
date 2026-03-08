@@ -30,11 +30,12 @@ public class ValidParenthesisDequeWay {
                     || (c == '}' && stack.peek() == '{')
                     || (c == ']' && stack.peek() == '['))) {
                 stack.pop();
+            } else {
+                return false; // "]}"
             }
         }
         System.out.println(stack);
         return stack.isEmpty();
-
     }
 }
 /**
